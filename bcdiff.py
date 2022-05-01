@@ -77,7 +77,7 @@ for i in var:
 
 #plot total difference of bc emissions from eight departments in 2008 and 2016
 fig = plt.figure(figsize=(10,8))
-proj = ccrs.PlateCarree()#等经纬度投影
+proj = ccrs.PlateCarree()
 extent = [70,140,15,55]
 read = Reader(shp_path)
 shpf = cfeature.ShapelyFeature(read.geometries(), proj, edgecolor='k',facecolor='none')
@@ -85,7 +85,7 @@ ax = fig.subplots(1,1,subplot_kw={'projection':proj})
 
 ax.add_feature(shpf)
 
-ax.set_extent(extent,crs = proj) #设置经纬度范围
+ax.set_extent(extent,crs = proj) 
 
 
 levels = [-10**-9,-10**-10,-10**-11,-10**-12,-10**-13,0,10**-13,10**-12,10**-11,10**-10,10**-9]
